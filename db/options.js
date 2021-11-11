@@ -5,4 +5,6 @@ const connectionOptions = {
 	useFindAndModify: false,
 };
 
-module.exports = { connectionOptions };
+module.exports = {
+	connectionOptions
+};
