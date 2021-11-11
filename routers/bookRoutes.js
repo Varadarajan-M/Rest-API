@@ -1,4 +1,6 @@
-const { Router } = require('express');
+const {
+	Router
+} = require('express');
 const {
 	getBooks,
 	addBook,
@@ -7,10 +9,7 @@ const {
 	deleteOneBook,
 	deleteAllBooks,
 } = require('../controllers/bookControllers');
-/** 
- * Remove the duplicate code here , line no 13
- */
-const Book = require('../models/book.model');
+
 const router = Router();
 
 router.route('/').get(getBooks).post(addBook).delete(deleteAllBooks);
