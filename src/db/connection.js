@@ -4,7 +4,10 @@ const {
 } = require('./options');
 
 const connectDb = () => {
-	mongoose.connect('mongodb://localhost:27017/restapi', connectionOptions);
+
+	const MONGO_URI =  process.env.MONGO_URI;
+
+	mongoose.connect(MONGO_URI, connectionOptions);
 	const connection = mongoose.connection;
 	connection.on('connected', () => {
 		console.log('connected to database');
